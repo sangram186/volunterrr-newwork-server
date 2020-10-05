@@ -27,7 +27,7 @@ client.connect(err => {
     app.get('/allData', (req, res) => {
         volunteers.find({})
         .toArray( (err, documents) => {
-        res.send(documents)
+          res.send(documents)
         })
     })
 
