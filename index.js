@@ -33,18 +33,11 @@ client.connect(err => {
 
 
     app.delete('/delete/:id', (req, res) => {
-      console.log(req.params.id)
       volunteers.deleteOne({_id: ObjectId(req.params.id)})
-      .then(result => {
-        res.send('success')
-      })
     })
 
     app.delete('/deleteFromAdmin/:id', (req, res) => {
       volunteers.deleteOne({_id: ObjectId(req.params.id)})
-      .then(result => {
-        res.send('success')
-      })
     })
 
 });
